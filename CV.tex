@@ -1,0 +1,124 @@
+%%%%%%%%%%%%%%%%%
+%% This is an sample CV template written by Muhammad Shiraz Ahmad (mail@shiraz-ahmad.com) on the top of the template, which was written by LianTze Lim.
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+
+\documentclass[12pt,a4paper,normalphoto]{LFCV}
+\geometry{left=1.5cm,right=1.5cm,marginparsep=1.0cm,top=1.5cm,bottom=1.5cm}
+\usepackage{fontspec}
+
+
+  %This would work on a standard latex installation, (your local computer)
+  %-----------------------------------------------------------------------
+  \usepackage{fontspec}
+    \setmainfont{Minion Pro}
+    \setsansfont{Minion Pro} 
+%  \setmainfont{Myriad Pro}
+%  \setsansfont{Myriad Pro} 
+  %-----------------------------------------------------------------------
+ 
+
+% If using pdflatex:
+\usepackage{xfp}
+\usepackage[nomessages]{fp}
+\FPeval{\Hrs}{round(0,0)}
+\usepackage{verbatim}
+\usepackage{enumitem}
+
+\usepackage{float}
+\usepackage[american]{babel}
+\usepackage{microtype}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage[document]{ragged2e}
+\usepackage{fp}
+\usepackage{multicol}
+\usepackage{tikz,tikzpagenodes}
+\usetikzlibrary{calc}
+\usepackage{refcount}
+\usepackage{enumitem}
+\setlength{\multicolsep}{6.0pt plus 2.0pt minus 1.5pt}% 50% of original values
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{Blue}{HTML}{3E0097}
+\definecolor{VividPurple}{HTML}{641E16}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{Black}{HTML}{000000}
+\definecolor{AccentBlue}{HTML}{3498DB}
+\colorlet{heading}{AccentBlue}
+\colorlet{accent}{Black}
+\colorlet{emphasis}{Black}
+\colorlet{body}{Black}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\usepackage{enumitem}
+\usepackage{fontawesome}
+
+
+\begin{document}
+\name{Bing Tan}
+\tagline{PhD student}
+
+\photo{2cm}{LOGO/BT.jpg}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{\href{mailto:bingtan72@std.uestc.edu.cn}{bingtan72@std.uestc.edu.cn}}
+  % \phone{\href{tel:+}{+}}
+  \mailaddress{University of Electronic Science and Technology of China, UESTC}
+  \location{Chengdu, China}
+  \homepage{\href{https://bingtan.me/}{Homepage: https://bingtan.me/}}
+}
+
+%% Make the header extend all the way to the right, if you want.
+
+\makecvheader
+
+
+\divider
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+
+\begin{enumerate}
+\item[] \vspace{-0.8cm}
+\end{enumerate}
+\cvsection{Biography}
+Bing Tam is currently pursuing a PhD at the University of Electronic Science and Technology of China. His research interests include variational inequalities, optimization algorithms, theory, and applications. So far he has published or received seven papers. His computer skills include: MATLAB, Python, \LaTeX  and so~on.
+ 
+\input{Tex/Education.tex}
+
+%\input{Tex/academic_experience.tex}
+
+%\input{Tex/Academic_Projects.tex}
+
+%\input{Tex/programming_experience.tex}
+
+%\input{Tex/community_service.tex}
+
+%\input{Tex/skills.tex}
+
+\input{Tex/publications.tex}
+
+%\input{Tex/Refrees.tex}
+
+
+\end{document}
